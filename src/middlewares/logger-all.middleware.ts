@@ -5,7 +5,7 @@ import express = require('express');
 export class AllLoggerMiddleware implements NestMiddleware {
   resolve(): MiddlewareFunction<express.Request, express.Response> {
     return (req, res, next) => {
-      console.log(`AllLoggerMiddleware ${req.method} ${req.path}`);
+      console.log(`AllLoggerMiddleware ${req.method} ${req.originalUrl || req.url}`);
       next();
     };
   }
