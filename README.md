@@ -17,12 +17,12 @@ However `curl http://localhost:3000/hello` logs:
 
 ```
 GetLoggerMiddleware: GET /hello
-AllLoggerMiddleware GET /
+AllLoggerMiddleware GET /hello
 ```
 
 
 And `curl http://localhost:3000/hello/111` logs:
 
 ```
-AllLoggerMiddleware GET /111
+AllLoggerMiddleware GET /hello/111
 ```
